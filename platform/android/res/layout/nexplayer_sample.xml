@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/RelativeLayout01"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+	 
+	<SurfaceView 
+		android:id="@+id/surface" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+	</SurfaceView>
+
+	<FrameLayout
+		android:id="@+id/gl_container"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_centerInParent="true" >
+	</FrameLayout>
+
+	<ImageView 
+		android:id="@+id/imageview" 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent">
+	</ImageView>
+	
+	<LinearLayout
+		android:id="@+id/optionPanel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentTop="true"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+		<CheckBox
+			android:id="@+id/checkSmoothRender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smooth Render" />
+		<CheckBox
+			android:id="@+id/checkVideoFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video Filter" /> 
+        <CheckBox
+			android:id="@+id/checkShowContentInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"       
+            android:text="Content Info." />
+        <CheckBox
+			android:id="@+id/enableTrackDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"       
+            android:text="Enable Track Down" />    
+        <!--      
+		<TextView
+			android:id="@+id/Inforation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/cp_inforamtion" 
+			android:textColor="#F00" android:layout_marginRight="25px" android:layout_marginLeft="5px" android:textSize="16dp">
+		</TextView>  -->                        	 
+	</LinearLayout>
+		
+	
+	<TextView
+		android:id="@+id/content_info"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=""
+		android:textColor="#0F0"
+		android:textSize="16dip"
+		android:layout_centerInParent="false"
+		android:layout_below="@id/optionPanel" />
+		
+	<TextView
+		android:id="@+id/content_statistics"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=""
+		android:textColor="#0FF"
+		android:textSize="16dip"
+		android:layout_centerInParent="false"
+		android:layout_below="@id/content_info" />
+		
+	<LinearLayout 
+		android:id="@+id/ControlPannel" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:orientation="vertical"
+		android:layout_alignParentBottom="true"
+		xmlns:android="http://schemas.android.com/apk/res/android">
+
+		<TableLayout   
+			android:id="@+id/TableLayout01"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"			
+			android:stretchColumns="*" >
+			<LinearLayout 
+				android:id="@+id/optionPanel2" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal">
+
+			<LinearLayout 
+				android:id="@+id/optionPanel2" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal"
+				android:layout_weight="7.5">				
+				<TextView
+					android:id="@+id/BW_Info"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text=""
+					android:textColor="#0FF"
+					android:textSize="16dip"
+					android:layout_centerInParent="false" />
+			</LinearLayout>
+			<LinearLayout 
+				android:id="@+id/optionPanel2" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content" 
+				android:orientation="horizontal"
+				android:layout_weight="2.5">
+					
+				<SeekBar 
+					android:id="@+id/seekBar_BandWidth" 
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content">
+				</SeekBar>	
+			</LinearLayout>
+			</LinearLayout>
+			<TableRow
+				android:id="@+id/TableRow01" >
+				<Button            
+		            android:id="@+id/buttonLocal"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_local" />
+		                    
+		        <Button
+		            android:id="@+id/buttonRTSP"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_RTSP" />
+		        <Button
+		            android:id="@+id/buttonDownload"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_download" />
+		        <Button
+		            android:id="@+id/buttonHTTPLive"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_httplive" />
+		        <Button
+		            android:id="@+id/buttonStop"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_stop" />
+		        <Button
+		            android:id="@+id/buttonBookmark"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_bookmark" />    
+			</TableRow>
+		</TableLayout>
+
+		<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/RelativeLayout01"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" >
+
+			<Button            
+	            android:id="@+id/buttonAudioStream"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"	            
+	            android:enabled="true"
+	            android:text="select Audio" />
+
+			<Button            
+	            android:id="@+id/buttonVideoStream"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toLeftOf="@id/buttonAudioStream"
+	            android:enabled="true"
+	            android:text="select Video" />
+	            
+			 <Button
+		            android:id="@+id/buttonFF"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:layout_toLeftOf="@id/buttonVideoStream"		            
+		            android:text="@string/cp_ff" /> 
+		            
+			<Button
+		            android:id="@+id/buttonPausePlay"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:layout_toLeftOf="@id/buttonFF"
+		            android:text="@string/cp_pauseplay" />		            
+			<Button
+		            android:id="@+id/buttonRew"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:enabled="true"
+		            android:text="@string/cp_rew" 
+		            android:layout_toLeftOf="@id/buttonPausePlay"/>
+		     <TextView
+					android:id="@+id/PlayTime"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_toLeftOf="@id/buttonRew"
+					android:layout_alignParentLeft="true"
+					android:text="@string/cp_playtime" 
+					android:layout_alignParentRight="true" 
+					android:layout_centerVertical="true" 
+					android:textColor="#FFF" android:layout_marginRight="5px" android:layout_marginLeft="5px" android:textSize="16dp">
+				</TextView>
+		</RelativeLayout>
+			
+
+<!--  
+		<TextView
+			android:id="@+id/PlayTime"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/cp_playtime" 
+			android:layout_alignParentRight="true" 
+			android:layout_centerVertical="true" 
+			android:textColor="#FFF" android:layout_marginRight="5px" android:layout_marginLeft="5px" android:textSize="16dp">
+		</TextView>
+-->			
+	</LinearLayout>
+	
+	<TextView
+		android:id="@+id/subtitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=""
+		android:textColor="#FFF"
+		android:textSize="20dip"
+		android:layout_centerInParent="true"
+		android:layout_above="@id/ControlPannel" />
+		
+	<TextView
+		android:id="@+id/subtitle2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text=""
+		android:textColor="#FFF"
+		android:layout_above="@id/subtitle" />	
+<!--  	
+	<ImageView 
+			android:id="@+id/video" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:layout_above="@id/ControlPannel"/>
+-->	 
+	
+	
+</RelativeLayout>	
+
+
+

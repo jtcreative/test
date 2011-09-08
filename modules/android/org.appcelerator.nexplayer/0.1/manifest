@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2011 by Your Company
+
+
+# these should not be edited
+name: nexplayer
+moduleid: org.appcelerator.nexplayer
+guid: ac611b03-8b74-4fa7-9cf4-e32ea3bcfb15
+platform: android
+minsdk: 1.7.2
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+		
+		<Button            
+	            android:id="@+id/buttonOpenURL"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:enabled="true"
+	            android:text="@string/cp_openURL" />           
+			
+	    <EditText 
+			android:id="@+id/editTxtURL" 
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_toLeftOf="@id/buttonOpenURL"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="type content URL hire."
+			android:text=""
+			android:lines="1" >
+		</EditText>      
+		                   	
+	</RelativeLayout>
+	<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" >
+		<ListView
+				android:id="@+id/listURL" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content" 
+				android:layout_margin="10px"
+				android:orientation="vertical"/>
+	</LinearLayout>			
+</LinearLayout>

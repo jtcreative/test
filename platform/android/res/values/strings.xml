@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">NexPlayerSample</string>
+    <string name="cp_stop">■</string>
+	<string name="cp_local">Local</string>
+	<string name="cp_RTSP">RTSP</string>
+	<string name="cp_download">PD</string>
+	<string name="cp_httplive">HTTP Live</string>
+	
+	<string name="cp_playtime">00:00/00:00</string>
+	<string name="cp_rew">REW</string>
+	<string name="cp_pauseplay">PAUSE</string>
+	<string name="cp_ff">FF</string>
+	
+	<string name="cp_bookmark">Bookmark</string>
+	<string name="cp_openURL">Play</string>
+	
+	<string name="cp_inforamtion">Information</string>
+
+</resources>
